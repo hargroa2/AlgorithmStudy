@@ -73,11 +73,11 @@ Take the divisible by 3 condition, for example:
 
 In order to replace that element with the word Fizz, we have to use the splice() method. Splice() allows you to delete existing elements, insert new elements, and replace them in an array, so this is important to remember.
 
-In this case, since we want to replace what is divisible by 3 with Fizz, we need to use the right arguments.
-
 ```
 array.splice(positionOfElement, numberOfItemsToDelete, stringToReplaceItWith)
 ```
+
+In this case, since we want to replace what is divisible by 3 with Fizz, we need to use the right arguments.
 
 One of the issues I had with this was that I was stating `answer.splice(i, 1, "Fizz")`. This is wrong, however, due to position 3 being the 4th element on the list, thus replacing the number 4 instead of 3 (`["1", "2", "3", "Fizz"]`). So, I just made the position `i - 1` and it fixed the problem.
 
