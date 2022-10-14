@@ -126,3 +126,9 @@ And there it is! This is correct according to LeetCode and is a tidy answer base
 
 - Time Complexity: O(N)
 - Space Complexity: O(1)
+
+Helpful Links:
+
+- [Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+- [String()](https://www.w3schools.com/jsref/jsref_string.asp)
+- [Splice()](https://www.javascripttutorial.net/javascript-array-splice/)
