@@ -7,7 +7,7 @@ With each challenge, there are stars (\*\*\*) next to the section separators tha
 - **split()** - Converts a string into an array
 - **reverse()** - Reverses the order of elements in an array and overwrites the original array
 - **join()** - Turns an array back into a string
-- **forEach()** -
+- **forEach()** - Executes a function once for each array element
 - **reduce()** -
 - **toString()** - Converts a type into a string
 - **Math.sign()** - Returns a math value whether it is negative, 0, or positive
