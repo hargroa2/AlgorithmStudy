@@ -14,4 +14,4 @@ With each challenge, there are stars (\*\*\*) next to the section separators tha
 - **toLowerCase()** - Makes a string lowercased
 - **toUpperCase()** - Makes a string uppercased
 - **substring()** - Lets you pluck out some part of a string
-- **replace()** -
+- **replace()** - Switches the first match of a string with a new string
