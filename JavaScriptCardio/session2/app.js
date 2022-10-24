@@ -78,3 +78,34 @@ const flattenArray = (arrays) => {
 // flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
 
 // ====== CHALLENGE 4: ANAGRAM ====== COMMENT
+// Return true if anagram and false if not
+// Ex. 'Dormitory' === 'dirty room##'
+const isAnagram = (str1, str2) => {
+  console.log(formatStr(str1) === formatStr(str2));
+};
+//helper function
+const formatStr = (str) => {
+  //replace anything thats not a word character with ""
+  return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join("");
+};
+// isAnagram("elbow", "below");
+
+// ====== CHALLENGE 5: LETTER CHANGES ====== COMMENT
+// Change every letter of the string to the one that follows it and capitalize the vowels.  Z should turn to A
+// Ex. 'hello there' === 'Ifmmp UIfsf'
+const letterChanges = (str) => {
+  let newStr = str.toLowerCase().replace(/[a-z]/gi, (char) => {
+    if (char === "z" || char === "Z") {
+      return "a";
+    } else {
+      //Will give us the next character after the character with their designated character code
+      return String.fromCharCode(char.charCodeAt() + 1);
+    }
+  });
+  newStr = newStr.replace(/a|e|i|o|u/gi, (vowel) => {
+    return vowel.toUpperCase();
+  });
+
+  console.log(newStr);
+};
+// letterChanges("Hello There");
