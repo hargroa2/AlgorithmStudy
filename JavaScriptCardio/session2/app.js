@@ -60,6 +60,21 @@ const chunkArray = (arr, len) => {
 // chunkArray([1, 2, 3, 4, 5, 6, 7], 2);
 
 // ====== CHALLENGE 3: FLATTEN ARRAY ====== COMMENT
-const flattenArray = (arrays) => {};
+// Reverse of chunked array; Take an array of arrays and flatten to a single array
+// ex. [[1,2][3,4],[5.6],[7]] = [1,2,3,4,5,6,7]
+const flattenArray = (arrays) => {
+  // SOLUTION 1: REDUCE
+  //   console.log(
+  //     arrays.reduce((a, b) => {
+  //       return a.concat(b);
+  //     })
+  //   );
+  // SOLUTION 2: APPLY METHOD
+  //   console.log([].concat.apply([], arrays));
+
+  // SOLUTION 3: SPREAD OPERATOR
+  console.log([].concat(...arrays));
+};
+// flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
 
 // ====== CHALLENGE 4: ANAGRAM ====== COMMENT
