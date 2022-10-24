@@ -3,10 +3,11 @@
 //ex. longestWord('Hello, my name is Brad') === 'hello'
 //ex. longestWord('Hello there, my name is Brad') === ['hello', 'there']
 const longestWord = (sen) => {
+  // create filtered array
   const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
-  //sort by length
+  //sort by length. We want the longest word at the beginning
   const sorted = wordArr.sort((a, b) => {
-    return b.length - a.length;
+    return b.length - a.length; //takes current iteration and compare the length to the one before it and sort it based on the length or amount of characters
   });
 
   //if multiple words, put into array
@@ -72,7 +73,7 @@ const flattenArray = (arrays) => {
   // SOLUTION 2: APPLY METHOD
   //   console.log([].concat.apply([], arrays));
 
-  // SOLUTION 3: SPREAD OPERATOR
+  // SOLUTION 3: SPREAD OPERATOR ***
   console.log([].concat(...arrays));
 };
 // flattenArray([[1, 2], [3, 4], [5, 6], [7]]);
