@@ -1,6 +1,6 @@
 // ====== CHALLENGE 1: LONGEST WORD ====== COMMENT
 // Return the longest word of a string. If more than one longest word, put it into an array
-//ex. longestEotf('Hello, my name is Brad') === 'hello'
+//ex. longestWord('Hello, my name is Brad') === 'hello'
 //ex. longestWord('Hello there, my name is Brad') === ['hello', 'there']
 const longestWord = (sen) => {
   const wordArr = sen.toLowerCase().match(/[a-z0-9]+/g);
