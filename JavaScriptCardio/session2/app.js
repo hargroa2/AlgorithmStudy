@@ -1,2 +1,5 @@
-console.log("second cardio session");
-// https://www.youtube.com/watch?v=FfchU1FS2IA
+// CHALLENGE 1: LONGEST WORD COMMENT
+
+// CHALLENGE 2: ARRAY CHUNKING COMMENT
+
+// CHALLENGE 3: FLATTERN ARRAY COMMENT
