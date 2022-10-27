@@ -1,7 +1,5 @@
 # JavaScript Cardio Session 2
 
-With each challenge, there are stars (\*\*\*) next to the section separators that indicate what the creator would do as the best option.
-
 ## Methods Glossary
 
 - **match()** - Retrieves the result of matching a string against a regular expression
