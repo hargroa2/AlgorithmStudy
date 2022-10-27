@@ -91,4 +91,10 @@ const missingLetters = (str) => {
 // ====== CHALLENGE 6: EVEN & ODD SUMS ====== COMMENT
 // Take in an array and return an array of the sums of even and odd numbers
 // ex. evenOddSums([50, 60, 60, 25, 71]) == [170, 116]
-const evenOddSums = () => {};
+const evenOddSums = (arr) => {
+  let evenSum = 0;
+  let oddSum = 0;
+  arr.forEach((num) => (num % 2 === 0 ? (evenSum += num) : (oddSum += num)));
+  console.log([evenSum, oddSum]);
+};
+// evenOddSums([50, 60, 60, 45, 71]);
