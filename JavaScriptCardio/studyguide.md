@@ -192,4 +192,16 @@ console.log(joinedMessage);
 
 ### 2. reverse()
 
+- Reverses the order of the elements in an array and overwrites the original array
+
+```
+let numbers = [1, 2, 3, 4, 5];
+let reversedArray = numbers.reverse();
+console.log(reversedArray);
+
+// Output: [5, 4, 3, 2, 1]
+```
+
+### 3. forEach()
+
 -
