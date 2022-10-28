@@ -127,6 +127,30 @@ console.log(result);
 
 ### 11. match()
 
+- Returns the result of matching a string against a regular expression in an array, one item for each match
+- Returns null if no match is found
+
+```
+const message = "JavaScript is a fun programming language.";
+
+// regular expression that checks if message contains 'programming'
+const exp = /programming/;
+
+let result = message.match(exp);
+console.log(result);
+
+/*
+Output: [
+  'programming',
+  index: 20,
+  input: 'JavaScript is a fun programming language.',
+  groups: undefined
+  ]
+*/
+```
+
+### 12. concat()
+
 -
 
 ---
