@@ -151,7 +151,27 @@ Output: [
 
 ### 12. concat()
 
--
+- Concatenates given arguments to the given string
+
+```
+let emptyString = "";
+let joinedString = emptyString.concat("JavaScript", "is", "fun.");
+console.log(joinedString);
+
+// Output: JavaScript is fun.
+```
+
+### 13. trim()
+
+- Removes whitespace from both ends of a string
+
+```
+const message = "    JAVASCRIPT IS FUN     ";
+const newMessage = message.trim();
+console.log(newMessage);
+
+// Output: JAVASCRIPT IS FUN
+```
 
 ---
 
