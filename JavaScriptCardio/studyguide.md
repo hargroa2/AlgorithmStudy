@@ -223,16 +223,25 @@ numbers.forEach((element) => console.log(element * element));
 
 - Takes an array and reduces it down to a single value. The value returned is stored in an accumulator (result/total).
 - arr.reduce(callback(accumulator, currentValue), initialValue)
-  - callback: The function that executes on each array element (if no initial value is provided, then except the first element)
-  - accumulator: It accumulates the callback's return values
-  - currentValue: The current element being passed from the array
-  - initialValue(optional): A value that will be passed to the function on first call. If not provided, the first element acts as the accumulator on the first call and the function will not execute on it.
+  - **callback**: The function that executes on each array element (if no initial value is provided, then except the first element)
+  - **accumulator**: It accumulates the callback's return values
+  - **currentValue**: The current element being passed from the array
+  - **initialValue(optional)**: A value that will be passed to the function on first call. If not provided, the first element acts as the accumulator on the first call and the function will not execute on it.
 
 ```
 const list = [1, 2, 3, 4, 5];
 console.log(list.reduce((total, item) => total + item, 0));
+
+// Output: 15
 ```
 
 ### 5. filter()
 
--
+- Returns a new array with all elements that pass the test defined by the given function. Any elements that fail to pass are taken out
+
+```
+let numbers = [1, 2, 3, 4, 5, 6];
+console.log(numbers.filter((number) => number % 2 === 0));
+
+// Output: [2, 4, 6]
+```
