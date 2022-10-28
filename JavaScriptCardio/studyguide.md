@@ -112,6 +112,23 @@ console.log(`index: ${index}`);
 
 ### 10. includes()
 
+- Checks if one string can be found inside of another string.
+- str.includes(searchString, position):
+  - searchString: The string to be searched for
+  - position (optional): The position within str to begin searching for searchString. It is 0 by default
+
+```
+const message = "JavaScript is fun";
+let result = message.includes("Java");
+console.log(result);
+
+// Output: true;
+```
+
+### 11. match()
+
+-
+
 ---
 
 ## Array Methods
