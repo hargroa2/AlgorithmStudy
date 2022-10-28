@@ -1,6 +1,6 @@
 # Array and String Method Study Guide
 
-There are a total of 21 methods that were utilized within these exercises. I will break down each of them and provide small examples to demonstrate how they work, as well as separate them into array methods and string methods sections.
+There are a total of 21 methods that were utilized within these exercises. I will break down each of them and provide small examples to demonstrate how they work, as well as separate them into array methods and string methods sections. I will add more methods to this that are not within the sessions for studying purposes if need be.
 
 ---
 
@@ -81,6 +81,17 @@ let string = String.fromCharCode(72, 69, 76, 76, 79);
 console.log(string);
 
 // Output: HELLO
+```
+
+### 8. charCodeAt()
+
+- Returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index
+
+```
+const greeting = "Good morning!";
+let result = greeting.charCodeAt(5);
+console.log(result);
+// Output: 109
 ```
 
 ## Array Methods
