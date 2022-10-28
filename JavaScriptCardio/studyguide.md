@@ -164,6 +164,7 @@ console.log(joinedString);
 ### 13. trim()
 
 - Removes whitespace from both ends of a string
+- Has no parameters. Does not change the original string
 
 ```
 const message = "    JAVASCRIPT IS FUN     ";
