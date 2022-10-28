@@ -237,7 +237,12 @@ console.log(list.reduce((total, item) => total + item, 0));
 
 ### 5. filter()
 
-- Returns a new array with all elements that pass the test defined by the given function. Any elements that fail to pass are taken out
+- Returns a new array with all elements that pass the test defined by the given function. Any elements that fail to pass are taken out.
+- Note that this does not change the original array
+- arr.filter(callback(element), thisArg)
+  - callback: The test function to execute on each array element. Will return true or false if an element passes or not
+  - element: The current element from the array
+  - thisArg(optional): The value to use as `this` when executing the function. By default, it is undefined
 
 ```
 let numbers = [1, 2, 3, 4, 5, 6];
@@ -245,3 +250,23 @@ console.log(numbers.filter((number) => number % 2 === 0));
 
 // Output: [2, 4, 6]
 ```
+
+### 6. sort()
+
+### 7. map()
+
+### 8. apply()
+
+### 9. push()
+
+### 10. pop()
+
+### 11. shift()
+
+### 12. unshift()
+
+### 13. splice()
+
+### 14. concat()
+
+### 15. from()
