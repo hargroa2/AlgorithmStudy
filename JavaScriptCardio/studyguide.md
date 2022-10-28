@@ -177,3 +177,19 @@ console.log(newMessage);
 ---
 
 ## Array Methods
+
+### 1. join()
+
+- Converts an array into a string by concatenating all of the elements, separating them by a specified separator.
+
+```
+let message = ["JavaScript", "is", "fun."];
+let joinedMessage = message.join(" ");
+console.log(joinedMessage);
+
+// Output: JavaScript is fun.
+```
+
+### 2. reverse()
+
+-
