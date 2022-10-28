@@ -72,4 +72,15 @@ console.log(result);
 // Output: JavaScript
 ```
 
+### 7. fromCharCode()
+
+- Returns a string created from the specified sequence of UTF-16 code units.
+
+```
+let string = String.fromCharCode(72, 69, 76, 76, 79);
+console.log(string);
+
+// Output: HELLO
+```
+
 ## Array Methods
