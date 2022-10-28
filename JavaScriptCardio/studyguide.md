@@ -192,7 +192,7 @@ console.log(joinedMessage);
 
 ### 2. reverse()
 
-- Reverses the order of the elements in an array and overwrites the original array
+- Reverses the order of the elements in an array and overwrites the original array.
 
 ```
 let numbers = [1, 2, 3, 4, 5];
@@ -203,5 +203,36 @@ console.log(reversedArray);
 ```
 
 ### 3. forEach()
+
+- Executes a function for each array element.
+
+```
+let numbers = [1, 3, 4, 9, 8];
+numbers.forEach((element) => console.log(element * element));
+
+/* Output:
+1
+9
+16
+81
+64
+*/
+```
+
+### 4. reduce()
+
+- Takes an array and reduces it down to a single value. The value returned is stored in an accumulator (result/total).
+- arr.reduce(callback(accumulator, currentValue), initialValue)
+  - callback: The function that executes on each array element (if no initial value is provided, then except the first element)
+  - accumulator: It accumulates the callback's return values
+  - currentValue: The current element being passed from the array
+  - initialValue(optional): A value that will be passed to the function on first call. If not provided, the first element acts as the accumulator on the first call and the function will not execute on it.
+
+```
+const list = [1, 2, 3, 4, 5];
+console.log(list.reduce((total, item) => total + item, 0));
+```
+
+### 5. filter()
 
 -
