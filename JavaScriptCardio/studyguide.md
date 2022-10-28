@@ -94,4 +94,24 @@ console.log(result);
 // Output: 109
 ```
 
+### 9. indexOf()
+
+- Returns the index of the first occurence of the substring in a string.
+- Note that it returns -1 if the value is not found within the string.
+- str.indexOf(searchValue, fromIndex):
+  - searchValue: The value to search for in a string. If no string is given, then undefined will be searched
+  - fromIndex (optional): The index to start the search at. By default it is at 0
+
+```
+const message = "JavaScript is not Java";
+const index = message.indexOf("va");
+console.log(`index: ${index}`);
+
+// Output: index: 2
+```
+
+### 10. includes()
+
+---
+
 ## Array Methods
