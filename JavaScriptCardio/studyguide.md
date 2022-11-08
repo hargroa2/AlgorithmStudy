@@ -289,18 +289,22 @@ console.log(square_numbers);
 // Output: [ 4, 16, 36, 64, 100 ]
 ```
 
-### 8. apply()
+### 8. push()
 
-### 9. push()
+- Adds zero or more elements to the end of an array.
 
-### 10. pop()
+```
 
-### 11. shift()
+```
 
-### 12. unshift()
+### 9. pop()
 
-### 13. splice()
+### 10. shift()
 
-### 14. concat()
+### 11. unshift()
 
-### 15. from()
+### 12. splice()
+
+### 13. concat()
+
+### 14. from()
