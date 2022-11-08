@@ -337,6 +337,21 @@ console.log(languages);
 
 ### 11. unshift()
 
+- Adds one or more elements to the beginning of an array and returns the new length of the array. (Remember: VIP)
+- arr.unshift(element1, element2, ...elementN):
+  - Takes in an arbitrary number of elements to add to the array
+- Changes the original array and its length
+
+```
+let languages = ["Java", "Python", "C"];
+
+// add "JavaScript" at the beginning of the array
+languages.unshift("JavaScript");
+console.log(languages);
+
+// Output: [ 'JavaScript', 'Java', 'Python', 'C' ]
+```
+
 ### 12. splice()
 
 ### 13. concat()
