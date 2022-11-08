@@ -395,3 +395,19 @@ console.log(joinedArrays);
 ```
 
 ### 14. from()
+
+- Creates a new array from an array-like or iterable object.
+- Array.from(arrayLike, mapFunc, thisArg):
+  - arrayLike is an array-like or iterable object to convert to an array
+  - mapFunc (optional) is a map function that is called on each element
+  - thisArg (optional) is a value to use as `this` when executing mapFunc.
+- Returns a new array and can create an array from iterable or array-like objects, such as strings, maps or sets.
+
+```
+// creating a new array from string
+let newArray = Array.from("abc");
+console.log(newArray);
+
+// Output:
+// [ 'a', 'b', 'c' ]
+```
