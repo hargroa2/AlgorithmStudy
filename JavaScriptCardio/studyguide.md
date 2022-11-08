@@ -253,6 +253,18 @@ console.log(numbers.filter((number) => number % 2 === 0));
 
 ### 6. sort()
 
+- Sorts the items of an array in a specific order (ascending or descending).
+- Returns the array after sorting the elements of the array in place, meaning that it changes the original array and no copy is made.
+- arr.sort(compareFunction):
+- There is an optional compareFunction parameter that you can pass inside of sort() to have a custom way/function call to sort the elements.
+
+```
+let city = ["California", "Barcelona", "Paris", "Kathmandu"];
+let sortedArray = city.sort();
+console.log(sortedArray);
+// Output: ['Barcelona', 'California', 'Kathmandu', 'Paris']
+```
+
 ### 7. map()
 
 ### 8. apply()
