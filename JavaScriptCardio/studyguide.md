@@ -306,7 +306,21 @@ console.log(city);
 
 ### 9. pop()
 
+- Removes the last element from an array and returns that element.
+- The pop() method does not have any parameters
+- Returns undefined if the array is empty
+
+```
+let cities = ["Madrid", "New York", "Kathmandu", "Paris"];
+let removedCity = cities.pop();
+
+console.log(cities)         // ["Madrid", "New York", "Kathmandu"]
+console.log(removedCity);   // Paris
+```
+
 ### 10. shift()
+
+-
 
 ### 11. unshift()
 
