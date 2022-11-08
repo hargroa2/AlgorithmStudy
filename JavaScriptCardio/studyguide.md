@@ -1,7 +1,5 @@
 # Array and String Method Study Guide
 
-There are a total of 21 methods that were utilized within these exercises. I will break down each of them and provide small examples to demonstrate how they work, as well as separate them into array methods and string methods sections. I will add more methods to this that are not within the sessions for studying purposes if need be.
-
 ---
 
 ## String Methods
