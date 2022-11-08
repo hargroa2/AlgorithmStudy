@@ -320,7 +320,20 @@ console.log(removedCity);   // Paris
 
 ### 10. shift()
 
--
+- Removes the first element from an array and returns that element.
+- Does not accept any arguments
+- Returns undefined if the array is empty
+- Changes the original array and its length
+
+```
+let languages = ["English", "Java", "Python", "JavaScript"];
+let first = languages.shift();
+console.log(first);
+console.log(languages);
+
+// Output: English
+//         [ 'Java', 'Python', 'JavaScript' ]
+```
 
 ### 11. unshift()
 
