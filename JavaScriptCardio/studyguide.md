@@ -1,7 +1,5 @@
 # Array and String Method Study Guide
 
----
-
 ## String Methods
 
 ### 1. toUpperCase()
