@@ -375,4 +375,23 @@ console.log(prime_numbers);
 
 ### 13. concat()
 
+- Returns a new array by merging two or more values/arrays.
+- arr.concat(value1, value2, ..., valueN):
+  - Takes in an arbitrary number of arrays and/or values as arguments
+
+```
+let primeNumbers = [2, 3, 5, 7]
+let evenNumbers = [2, 4, 6, 8]
+
+let joinedArrays = primeNumbers.concat(evenNumbers);
+console.log(joinedArrays);
+
+/* Output:
+[
+  2, 3, 5, 7,
+  2, 4, 6, 8
+]
+*/
+```
+
 ### 14. from()
