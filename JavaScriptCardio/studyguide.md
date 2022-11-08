@@ -292,9 +292,16 @@ console.log(square_numbers);
 ### 8. push()
 
 - Adds zero or more elements to the end of an array.
+- arr.push(element1, element2, ..., elementN):
+  - Takes in an arbitrary number of elements to add to the array
+- This method changes the original array and its length
 
 ```
+let city = ["New York", "Madrid", "Kathmandu"];
+city.push("London");
+console.log(city);
 
+// Output: [ 'New York', 'Madrid', 'Kathmandu', 'London' ]
 ```
 
 ### 9. pop()
