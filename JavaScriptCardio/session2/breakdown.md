@@ -1,4 +1,4 @@
-# JavaScript Cardio Session 2:
+# JavaScript Cardio Session 2
 
 ## Methods Glossary
 
