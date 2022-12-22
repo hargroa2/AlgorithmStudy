@@ -26,6 +26,6 @@ console.log(strings);
 
 /*
 Static vs. Dynamic Arrays:
-- Static arrays are fixed in size, meaning you need to specify the number of elements your array will hold. You know that the array will have 7 items, or a set amount. If we forgot item, we'd have to copy the entire array and paste it with the new item in its new location. 
+- Static arrays are fixed in size, meaning you need to specify the number of elements your array will hold. You know that the array will have 7 items, or a set amount. If we forgot an item, we'd have to copy the entire array and paste it with the new item in its new location. 
 - Dynamic arrays allow us to copy and rebuild arrays at a new location. In languages like JS, they automatically reallocate the memory for you. It expands as you add more elements so you don't need to know how much it needs ahead of time. Dynamic arrays can possibly have an O(n) append because it is copying and putting the array in a new location, iterating over it.
 */
