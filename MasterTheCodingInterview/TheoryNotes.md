@@ -48,3 +48,27 @@ a = 50 + 3; // O(1)
 O(n^2) - Quadratic time
 
 - As the number of inputs increase, the number of operations increase and are multiplied (O(n\*n)). If you have 3 inputs in a nested for-loop, then there are 9 operations. (3)^2 = 9
+
+O(n!) - Factorial time
+
+- This is the worst scenario to have. With a factorial n, we are adding a loop for every input that we have, which is not efficient at all.
+
+### Other types for specific algorithms:
+
+O(log n) - Logarithmic time
+
+- Usually for searching algorithms if they are sorted (Binary Search)
+
+O(n log(n)) - Log Linear time
+
+- Usually sorting operations
+
+O(2^n) - Exponential time
+
+- Recursive algorithms that solve a problem of size N
+
+### Keep In Mind
+
+O(a + b) - 2 Different inputs in order
+
+O(a \* b) - 2 different inputs nested, like a nested for-loop
