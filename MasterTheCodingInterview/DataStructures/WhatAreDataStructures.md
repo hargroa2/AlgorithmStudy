@@ -10,3 +10,14 @@ There are a few different operations that a data structure can perform:
 4. Searching - Find the location of a data item if it exists in a given collection
 5. Sorting - Having data be organized in a preferred order
 6. Access - Accessing the data that we have on our computer
+
+The different kinds of data structures are the following:
+
+- Arrays
+- Stacks
+- Queues
+- Linked lists
+- Trees
+- Tries
+- Graphs
+- Hash tables
