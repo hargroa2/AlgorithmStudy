@@ -30,17 +30,19 @@ Static vs. Dynamic Arrays:
 - Dynamic arrays allow us to copy and rebuild arrays at a new location. In languages like JS, they automatically reallocate the memory for you. It expands as you add more elements so you don't need to know how much it needs ahead of time. Dynamic arrays can possibly have an O(n) append because it is copying and putting the array in a new location, iterating over it.
 */
 
-// ==== CLASSES IN JS ====
+// ==== CLASSES IN JS ==== COMMENT
 
 // Reference type - It is not stored directly where it is created, but it acts as a kind of pointer to a value stored elsewhere. It is created by the programmer
 var object1 = { value: 10 };
 var object2 = object1;
+
 // Context - Tells you where you are within the object. "this" is a window object that tells you that we are in the window object, and when we do something like window.alert(), we are allowed to do that because we are inside of that object.
 const object4 = {
   a: function () {
     console.log(this);
   },
 };
+
 // Instantiation - When you make a copies or an instances of an object and reuse the code.
 class Player {
   constructor(name, type) {
@@ -68,7 +70,7 @@ const wizard1 = new Wizard("Shelly", "Healer"); // Make an instance of Wizard
 const wizard2 = new Wizard("Sean", "Dark Magic");
 // wizard1.play();
 
-// ======== CREATING AN ARRAY DATA STRUCTURE USING CLASSES ========
+// ======== CREATING AN ARRAY DATA STRUCTURE USING CLASSES ======== COMMENT
 class MyArray {
   constructor() {
     this.length = 0;
@@ -113,3 +115,17 @@ newArray.push("nice");
 // console.log(newArray);
 newArray.delete(1);
 // console.log(newArray);
+
+// ==== EXERCISE: REVERSE A STRING ===== COMMENT
+
+//Create a function that reverses a string. 'Hi my name is Amanda' should return 'adnamA si eman ym iH'
+
+const reverse = (str) => {
+  if (!str || str.length < 2 || typeof str !== "string") {
+    console.log("Please enter a string that has at least 2 characters");
+    return "Please enter a string that has more than 2 characters";
+  }
+  const revString = str.split("").reverse().join("");
+  console.log(revString);
+};
+// reverse("Hi");
