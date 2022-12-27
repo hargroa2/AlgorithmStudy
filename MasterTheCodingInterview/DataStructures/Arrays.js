@@ -129,3 +129,47 @@ const reverse = (str) => {
   console.log(revString);
 };
 // reverse("Hi");
+
+// ====== EXERCISE: MERGE SORTED ARRAYS ====== COMMENT
+
+// Create a function that takes in two arrays and merges them together into a larger single array that is sorted by least to greatest number order.
+const mergeSorted = (array1, array2) => {
+  for (let i = 0; i < array2.length; i++) {
+    // iterates through array2 and pushes it into array1
+    array1.push(array2[i]);
+  }
+  array1.sort((a, b) => a - b); // then sort array1 in ascending order
+  console.log(array1);
+};
+
+mergeSorted([0, 3, 4, 31], [4, 6, 30]);
+
+// MCI'S METHOD OF SOLVING THIS. Note that he made this less readable on purpose yet is still O(n) time complexity.
+const mergedSorted2 = (arr1, arr2) => {
+  const mergedArr = [];
+  let arr1Item = arr1[0];
+  let arr2Item = arr2[0];
+  let i = 1;
+  let j = 1;
+
+  if (arr1.length === 0) {
+    return arr2;
+  }
+  if (arr2.length === 0) {
+    return arr1;
+  }
+
+  while (arr1Item || arr2Item) {
+    if (!arr2Item || arr1Item < arr2Item) {
+      mergedArr.push(arr1Item);
+      arr1Item = arr1[i];
+      i++;
+    } else {
+      mergedArr.push(arr2Item);
+      arr2Item = arr2[j];
+      j++;
+    }
+  }
+
+  return mergedArr;
+};
