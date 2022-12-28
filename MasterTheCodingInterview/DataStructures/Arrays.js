@@ -10,6 +10,19 @@ insert - O(n)
 delete - O(n)
 */
 
+/*
+PROS:
+- Fast lookups
+- Fast push() and pop()
+- Ordered
+
+CONS:
+- Slow insertion
+- Slow deletion
+- Static arrays have fixed sizes
+
+ */
+
 const strings = ["a", "b", "c", "d"];
 // 4 * 4 = 16 bytes of storage. Storing it sequentually in our RAM
 strings[2]; //Grab the third item that is stored in our memory.
