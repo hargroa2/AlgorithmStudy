@@ -65,8 +65,7 @@ const firstRecurring = (array) => {
 
 // firstRecurring([1, 5, 1, 2, 3, 5, 1, 2, 4]);
 
-// ========
-
+// O(n) version
 const firstRec2 = (arr) => {
   let map = {};
   for (let i = 0; i < arr.length; i++) {
