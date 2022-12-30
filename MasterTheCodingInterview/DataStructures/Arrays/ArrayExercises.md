@@ -10,6 +10,6 @@ Optional exercises to practice for interview questions. Can come back to these o
 
 4. [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/description/)
 
-5.[Rotate Array](https://leetcode.com/problems/rotate-array/description/)
+5 [Rotate Array](https://leetcode.com/problems/rotate-array/description/)
 
 6. BONUS: [Longest Word](https://coderbyte.com/information/Longest%20Word)
