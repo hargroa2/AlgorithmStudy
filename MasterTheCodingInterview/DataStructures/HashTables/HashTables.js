@@ -70,14 +70,15 @@ const firstRec2 = (arr) => {
   let map = {};
   for (let i = 0; i < arr.length; i++) {
     if (map[arr[i]] !== undefined) {
+      // If the map's keys are not undefined, meaning they are already occupied, return what is there
       console.log(arr[i]);
       return arr[i];
     } else {
-      map[arr[i]] = i;
+      map[arr[i]] = i; // otherwise, the key inside the map object equals i (0, 1, 2, etc.). Put it in the object
     }
-    console.log(map);
+    console.log(map); // show what is inside the map
   }
-  return undefined;
+  return undefined; // if the for loop is broken and there isn't a repeating number, return undefined
 };
 
 firstRec2([3, 5, 1, 2, 3, 5, 1, 2, 4]);
