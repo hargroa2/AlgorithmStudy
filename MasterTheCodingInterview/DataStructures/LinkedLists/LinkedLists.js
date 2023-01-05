@@ -57,6 +57,7 @@ class LinkedList {
     this.tail = this.head;
     this.length = 1;
   }
+
   append(value) {
     const newNode = new Node(value);
     this.tail.next = newNode;
@@ -156,5 +157,5 @@ myLinkedList.reverse();
 // console.log(myLinkedList);
 
 // Doubly linked lists are similar to singly, except that it links to the node before it. The next node to a head will point back to the previous node that links it. They allow us to traverse our list backwards.Singly lists don't allow me to know what comes before a certain node, but a doubly one does.
-// You should use a singly linked list: It requires less memory, a little faster if we have to delete something. But it cannot be traversed from back to front. It can be used when your goal is to have fast insertion and deletion and you don't really have that much searching. A doubly LL: It can be iterated or traversed from the front or back, and if you need to delete a previous node, you can do that fairly easily. Downside is that it is fairly complex and requires more memory because of this extra property and requires more operations since we have to keep track of a previous node. you want them when you don't have limitation on memory and you want good operation on searching elements like finding something backwards or forwards.
+// You should use a singly linked list: It requires less memory, a little faster if we have to delete something. But it cannot be traversed from back to front. It can be used when your goal is to have fast insertion and deletion and you don't really have that much searching. A doubly LL: It can be iterated or traversed from the front or back, and if you need to delete a previous node, you can do that fairly easily. Downside is that it is fairly complex and requires more memory because of this extra property and requires more operations since we have to keep track of a previous node. You want them when you don't have limitation on memory and you want good operation on searching elements like finding something backwards or forwards.
 // Linked List pros: fast insertion, fast deletion, ordered, flexible size. Cons: slow lookups, more memory
