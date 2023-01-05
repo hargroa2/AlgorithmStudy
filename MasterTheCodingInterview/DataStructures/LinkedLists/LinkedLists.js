@@ -43,6 +43,7 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.prev = null;
   }
 }
 
@@ -51,6 +52,7 @@ class LinkedList {
     this.head = {
       value: value,
       next: null,
+      prev: null,
     };
     this.tail = this.head;
     this.length = 1;
@@ -58,6 +60,7 @@ class LinkedList {
   append(value) {
     const newNode = new Node(value);
     this.tail.next = newNode;
+    newNode.prev = this.tail;
     this.tail = newNode;
     this.length++;
     return this;
@@ -66,6 +69,7 @@ class LinkedList {
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
+    this.head.prev = newNode;
     this.head = newNode;
     this.length++;
     return this;
@@ -89,11 +93,14 @@ class LinkedList {
     const newNode = {
       value: value,
       next: null,
+      prev: null,
     };
     const leader = this.traverseToIndex(index - 1);
-    const holdingPointer = leader.next;
+    const follower = leader.next;
     leader.next = newNode;
-    newNode.next = holdingPointer;
+    newNode.prev = leader;
+    newNode.next = follower;
+    follower.prev = newNode;
     this.length++;
     console.log(this.printList);
     return this.printList;
@@ -116,6 +123,26 @@ class LinkedList {
     this.length--;
     return this.printList();
   }
+
+  reverse() {
+    if (!this.head.null) {
+      console.log(this.head);
+      return this.head;
+    }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while (second) {
+      const temp = second.next;
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null;
+    this.head = first;
+    console.log(this.printList());
+    return this.printList();
+  }
 }
 
 const myLinkedList = new LinkedList(10);
@@ -125,4 +152,9 @@ myLinkedList.prepend(1);
 myLinkedList.insert(2, 99);
 myLinkedList.printList();
 myLinkedList.remove(2);
+myLinkedList.reverse();
 // console.log(myLinkedList);
+
+// Doubly linked lists are similar to singly, except that it links to the node before it. The next node to a head will point back to the previous node that links it. They allow us to traverse our list backwards.Singly lists don't allow me to know what comes before a certain node, but a doubly one does.
+// You should use a singly linked list: It requires less memory, a little faster if we have to delete something. But it cannot be traversed from back to front. It can be used when your goal is to have fast insertion and deletion and you don't really have that much searching. A doubly LL: It can be iterated or traversed from the front or back, and if you need to delete a previous node, you can do that fairly easily. Downside is that it is fairly complex and requires more memory because of this extra property and requires more operations since we have to keep track of a previous node. you want them when you don't have limitation on memory and you want good operation on searching elements like finding something backwards or forwards.
+// Linked List pros: fast insertion, fast deletion, ordered, flexible size. Cons: slow lookups, more memory
