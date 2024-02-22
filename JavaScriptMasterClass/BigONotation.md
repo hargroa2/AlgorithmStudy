@@ -90,3 +90,30 @@ console.log(addUpTo2(3));
 ```
 
 - You can say that there are always 3 operations (+, \*, /) that are occurring and regardless of n or the inputs that you are putting in, the time it takes to complete the problem is constant and does not change or grow. Therefore, the Big O of this solution is `O(1)`.
+
+### More Examples
+
+```
+let countUpAndDown = (n) => {
+  console.log("Going up!");
+  for (let i = 0; i <= n; i++) {
+    console.log(i);
+  }
+  console.log("At the top! \nGoing down...");
+  for (let j = n - 1; j >= 0; j--) {
+    console.log(j);
+  }
+  console.log("Back down. Bye!");
+};
+
+console.log(countUpAndDown(9));
+
+```
+
+- In the example above, the first for-loop is `O(n)`, since as n grows, this loop grows. Same thing for the second for-loop as well, it is `O(n)` and is carrying out the decrementing operation instead of incrementing. This is technically `O(2n)`, but it gets simplified to `O(n)` since it is more about the big picture.
+
+Here's another example that is different from the previous ones:
+
+```
+
+```
