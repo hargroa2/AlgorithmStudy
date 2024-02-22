@@ -76,4 +76,17 @@ let addUpTo = (n) => {
 }
 ```
 
-- If n is 5, there are 5 operations for this loop. It scales with n. Also, the `+` and `=` signs are operators as well, and counting all of the operations there can be as low as 2n or as high as 5n + 2. But regardless, of the exact number. the number of operations grows roughly proportionally with n.
+- If n is 5, there are 5 operations for this loop. It scales with n. Also, the `+` and `=` signs are operators as well, and counting all of the operations there can be as low as 2n or as high as 5n + 2. But regardless of the exact number, the number of operations grows roughly proportionally with n, and therefore the **_the number of inputs or n grows in proportion to the runtime or the time it takes to complete execution._**
+
+- Therefore, because the number of operations is eventually bounded by a multiple of n (say, 10n), and again grows in runtime as n grows, the Big O of this example is `O(n)`.
+
+So if we go back to the other example:
+
+```
+let addUpTo2 = (n) => {
+  return n * (n + 1) / 2;
+}
+console.log(addUpTo2(3));
+```
+
+- You can say that there are always 3 operations (+, \*, /) that are occurring and regardless of n or the inputs that you are putting in, the time it takes to complete the problem is constant and does not change or grow. Therefore, the Big O of this solution is `O(1)`.
