@@ -24,4 +24,16 @@ let countUpAndDown = (n) => {
   console.log("Back down. Bye!");
 };
 
-console.log(countUpAndDown(9));
+// console.log(countUpAndDown(9)); // O(n) linear time
+
+let printAllPairs = (n) => {
+  for (let i = 0; i < n; i++) {
+    // O(n)
+    for (let j = 0; j < n; j++) {
+      // O(n)
+      console.log(i, j);
+    }
+  }
+};
+
+console.log(printAllPairs(2)); // O(n^2^)
