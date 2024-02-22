@@ -18,7 +18,7 @@ let addUpTo = (n) => {
   }
   return total;
 }
-console.log(addUpTo(6));
+console.log(addUpTo(3));
 ```
 
 - This is a correct way to solve the problem, however there is another way we could approach it as well:
@@ -27,6 +27,27 @@ console.log(addUpTo(6));
 let addUpTo2 = (n) => {
   return n * (n + 1) / 2;
 }
-console.log(addUpTo2(6));
+console.log(addUpTo2(3));
 
 ```
+
+- So, which is better? The one that is fastest, or less memory-intensive, or more readable? The first two are usually more important than readability.
+
+- You can use a timing function to evaluate a function's performance:
+
+```
+let addUpTo = (n) => {
+  let total = 0;
+  for (let i = 1; i <= n; i++) {
+    total += i;
+  }
+  return total;
+}
+
+let t1 = performance.now();
+addUpTo(1000000000);
+let t2 = performance.now();
+console.log(`Time Elapsed: ${(t2 - t1) / 1000} seconds.`);
+```
+
+- The second solution is much faster in execution in comparison to the second one. While this is a way to test it, it brings us the problem with time, where different machines will record different times and it is not reliable. For fast algorithms, speed measurements may not be precise enough, and the same machine can even record different times.
