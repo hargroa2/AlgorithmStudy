@@ -1,3 +1,5 @@
+// ==== Add the sum of numbers for n REFERENCE ====
+
 let addUpTo = (n) => {
   let total = 0;
   for (let i = 1; i <= n; i++) {
@@ -7,11 +9,13 @@ let addUpTo = (n) => {
 };
 // console.log(addUpTo(3)); // O(n) linear time
 
+// ==== Add the sum of numbers version 2 REFERENCE ====
 let addUpTo2 = (n) => {
   return (n * (n + 1)) / 2;
 };
 // console.log(addUpTo2(6)); // O(1) constant time
 
+// ==== Counts up and down with n as its peak REFERENCE ====
 let countUpAndDown = (n) => {
   console.log("Going up!");
   for (let i = 0; i <= n; i++) {
@@ -26,6 +30,7 @@ let countUpAndDown = (n) => {
 
 // console.log(countUpAndDown(9)); // O(n) linear time
 
+// ==== Prints all pairs up to n REFERENCE ====
 let printAllPairs = (n) => {
   for (let i = 0; i < n; i++) {
     // O(n)
@@ -36,4 +41,4 @@ let printAllPairs = (n) => {
   }
 };
 
-console.log(printAllPairs(2)); // O(n^2^)
+// console.log(printAllPairs(2)); // O(n^2^) quadratic time
