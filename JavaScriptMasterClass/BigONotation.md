@@ -172,6 +172,20 @@ let logAtLeast5 = (n) => {
   }
 }
 
-console.log(logAtLeast5(7));
+console.log(logAtLeast5(7)); // O(n)
 
 ```
+
+- Since the minimum that is printed out is 5, and n is counted out if it is larger than 5, then the complexity is `O(n)` since the n has more weight here and could be a ginormous number
+
+```
+let logAtMost5 = (n) => {
+  for (let i = 1; i <= Math.min(5, n); i++) {
+    console.log(i);
+  }
+}
+
+console.log(logAtMost5(1));
+```
+
+- This example only prints out 5 at maximum if n is 5 or more, and will count out less if the number is less than 5. Therefore, if there are only 5 operations at most at a time, then the time complexity is `O(5)`, which can be simplified to `O(1)` constant time.
