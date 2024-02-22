@@ -42,3 +42,12 @@ let printAllPairs = (n) => {
 };
 
 // console.log(printAllPairs(2)); // O(n^2^) quadratic time
+
+let logAtLeast5 = (n) => {
+  for (let i = 1; i <= Math.max(5, n); i++) {
+    // Math.max returns the largest of the numbers given within the parentheses.
+    console.log(i);
+  }
+};
+
+console.log(logAtLeast5(3));

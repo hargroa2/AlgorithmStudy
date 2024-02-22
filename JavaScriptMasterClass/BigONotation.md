@@ -89,7 +89,7 @@ let addUpTo2 = (n) => {
 console.log(addUpTo2(3));
 ```
 
-- You can say that there are always 3 operations (+, \*, /) that are occurring and regardless of n or the inputs that you are putting in, the time it takes to complete the problem is constant and does not change or grow. Therefore, the Big O of this solution is `O(1)`.
+- You can say that there are always 3 operations (+, \*, /) that are occurring and regardless of n or the inputs that you are putting in, the time it takes to complete the problem is constant and does not change or grow. There are 3 operations no matter what n is. Therefore, the Big O of this solution is `O(1)`.
 
 ### More Examples
 
@@ -132,3 +132,46 @@ console.log(printAllPairs(5)); // O(n^2^)
 - If you were to plot this on a chart, it wouldn't be a linear line like `O(n)` where the runtime is proportionate to n. Instead,as n grows larger, the runtime grows n \* n larger and will take a lot longer in comparison. This is a quadratic time, since it exponentially curves upwards on a chart.
 
 ## Simplifying Big O Expressions
+
+There are some helpful rules of thumb for determining the time complexity of an algorithm:
+
+1. Constants don't matter
+
+   - `O(2n)` --> `O(n)`
+   - `O(500)` --> `O(1)`
+   - `O(13n^2^)` --> `O(n^2^)`
+
+2. Smaller terms don't matter
+
+   - `O(n + 10)` --> `O(n)`
+   - `O(1000n + 50)` --> `O(n)`
+   - `O(n^2^ + 5n + 8)` --> `O(n^2^)`
+
+3. Arithmetic operations are constant
+
+   - `+`, `-`, `*`, `/`
+   - Your computer will take the same amount of time to make 3 arithmetic operations, or 50,000 of them
+
+4. Variable assignment is constant
+
+   - Your computer takes the same time to make a variable x = 1000 compared to x = 20,000 or a million.
+
+5. Accessing elements in an array (by index) or object (by key) is constant
+
+   - If I want to find the first item or 10th item of an array, as long as I use the index or have an object and use the key to access that value, it is constant time.
+
+6. In a loop, the complexity is the length of the loop times the complexity of whatever happens inside of the loop
+   - If there is another loop within a loop, that changes the complexity and makes it take longer to execute. The input value of n makes a difference in what occurs depending on what is being performed in the loop itself as well
+
+### A Couple of Examples
+
+```
+let logAtLeast5 = (n) => {
+  for (let i = 1; i <= Math.max(5, n); i++) {
+    console.log(i);
+  }
+}
+
+console.log(logAtLeast5(7));
+
+```
