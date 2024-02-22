@@ -72,5 +72,14 @@ function subtotals(array) {
   return subtotalArray;
 }
 
-console.log(subtotals([1, 2, 3, 4])); // O(n^2^)
+// console.log(subtotals([1, 2, 3, 4])); // O(n^2^)
 // [ 1, 3, 6, 10] --> Adds up totals until it gets to the end of the array
+
+let sum = (arr) => {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+};
+console.log(sum([1, 2, 3]));

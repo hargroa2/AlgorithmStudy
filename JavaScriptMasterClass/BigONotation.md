@@ -189,3 +189,38 @@ console.log(logAtMost5(1));
 ```
 
 - This example only prints out 5 at maximum if n is 5 or more, and will count out less if the number is less than 5. Therefore, if there are only 5 operations at most at a time, then the time complexity is `O(5)`, which can be simplified to `O(1)` constant time.
+
+## Space Complexity
+
+- So far, we've only been worrying about time and how fast algorithms can run, or `time complexity`, which is analyzing the runtime of an algorithm as the size of the inputs increases. Now, let's talk about the space that an algorithm takes up as the size of the input increases.
+
+  - We can use Big O notation to analyze `space complexity`,or how much additional memory do we need to allocate in order to run the code in our algorithm
+  - You may hear the term `auxiliary space complexity` to refer to space required by the algorithm itself, not including space taken up by the inputs. Unless otherwise noted, when we talk about space complexity, we'll be talking about auxiliary space complexity. We're talking about mainly what's going on inside the algorithm.
+
+  ### Rules of Thumb
+
+1. Most primitives (booleans, numbers, undefined, null) are constant space
+
+   - It doesn't matter what the size of n is, whether it is 1 or 1000 or true or false, we consider it constant space and takes up the same amount of space
+
+2. Strings require `O(n)` space (where n is the string length)
+
+   - If n is the length of the string, the input could grow to n amount of characters like 50, which means that the string would take up 50 times more space than a single chracter string
+
+3. Reference types are generally `O(n)`, where n is the length (for arrays) or the number of keys (for objects)
+   - If n is the length of an array, which could be 4, compared to another one that is 2, it takes up twice as much space as the shorter array
+
+---
+
+```
+let sum = (arr) => {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+};
+console.log(sum([1, 2, 3]));
+```
+
+- In this example, it takes the array and sums up all of its elements. There is a number at `let total = 0`, and another number at `let i = 0` in the for-loop declaration, but no matter what we put inside of n or the size of the array, it doesn't have an impact on the space that is taken up because we only have these 2 variables. We're not adding new variables based off of the length, we're adding to the total variable but we are not adding any new variables here. That means that we have constant space, or `O(1)`.
