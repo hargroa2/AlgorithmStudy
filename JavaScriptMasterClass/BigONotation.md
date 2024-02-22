@@ -130,3 +130,5 @@ console.log(printAllPairs(5)); // O(n^2^)
 
 - As you can see, the first for-loop is `O(n)`, but there is another for-loop that is `O(n)` inside of it.This isn't `O(2n)` because it is nested inside of the other loop. It turns out to be `O(n^2^)`, or O of n squared, which means that as n grows, the runtime roughly grows at the rate of n squared.
 - If you were to plot this on a chart, it wouldn't be a linear line like `O(n)` where the runtime is proportionate to n. Instead,as n grows larger, the runtime grows n \* n larger and will take a lot longer in comparison. This is a quadratic time, since it exponentially curves upwards on a chart.
+
+## Simplifying Big O Expressions
