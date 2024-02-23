@@ -239,3 +239,33 @@ console.log(double([1, 2, 3, 4]));
 ```
 
 - This makes a new array and multiplies each element from the original array by 2. We made a new array, but that's not that significant. However, the `newArr.push(2 * arr[i])` portion is important to note here. If the array is 10 items here, we're storing 10 items in a new array, or if it is 50, then we are storing 50 items in that new array. The space that is taken up is proportionate to n, the input array. Therefore, the space complexity is `O(n)`.
+
+## Logarithms
+
+- A logarithm is the inverse of an exponential function. For example, `log~2~8 = 3` is a logarithm. If you solve it and turn it into an exponent, it becomes `2^3^ = 8`. You could have examples with different kinds of bases, but for the most part there are binary logarithms, like log 2, log 10, or log e.
+
+- The logarithm of a number roughly measures the number of times you can divide that number by 2 before you get a value that's less than or equal to 1.
+
+  - Example: 8 / 2 = 4 / 2 = 2 / 2 = 1. We divided by 2 three times, so log(8) = 3
+  - Example: 25 / 2 - 12.5 / 2 = 6.25 / 2 = 3.125 / 2 = 1.5625 / 2 = 0.78125. We divided about 5 times, but the exact answer is log(25) = 4.64
+
+- In conclusion, logarithmic time complexity is great and is very close to O(1) constant time, so O(log n) is definitely favorable in comparison to something like `O(n)`. There is also `O(nlog n)`, which is worse than `O(n)`, but is better than `O(n^2^)`.
+
+  - Certain searching algorithms have logarithmic time complexity
+  - Efficient sorting algorithms involve logarithms
+  - Recursion sometimes involves logarithmic space complexity
+
+  Ranking from most ideal time complexity to worst:
+
+  1. `O(1)`
+  2. `O(log n)`
+  3. `O(n)`
+  4. `O(nlog n)`
+  5. `O(n^2^)`
+
+## Recap
+
+- To analyze the performance of an algorithm, we use Big O Notation
+- Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
+- Big O Notation doesn't care about precision, only about general trends (linear? quadratic? constant?)
+- The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm
