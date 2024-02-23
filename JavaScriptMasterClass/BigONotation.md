@@ -224,3 +224,18 @@ console.log(sum([1, 2, 3]));
 ```
 
 - In this example, it takes the array and sums up all of its elements. There is a number at `let total = 0`, and another number at `let i = 0` in the for-loop declaration, but no matter what we put inside of n or the size of the array, it doesn't have an impact on the space that is taken up because we only have these 2 variables. We're not adding new variables based off of the length, we're adding to the total variable but we are not adding any new variables here. That means that we have constant space, or `O(1)`.
+
+Another example:
+
+```
+let double = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr;
+};
+console.log(double([1, 2, 3, 4]));
+```
+
+- This makes a new array and multiplies each element from the original array by 2. We made a new array, but that's not that significant. However, the `newArr.push(2 * arr[i])` portion is important to note here. If the array is 10 items here, we're storing 10 items in a new array, or if it is 50, then we are storing 50 items in that new array. The space that is taken up is proportionate to n, the input array. Therefore, the space complexity is `O(n)`.

@@ -82,4 +82,13 @@ let sum = (arr) => {
   }
   return total;
 };
-console.log(sum([1, 2, 3]));
+// console.log(sum([1, 2, 3])); // O(1)
+
+let double = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr;
+};
+console.log(double([1, 2, 3, 4]));
