@@ -197,7 +197,6 @@ console.log(logAtMost5(1));
 
 - So far, we've only been worrying about time and how fast algorithms can run, or `time complexity`, which is analyzing the runtime of an algorithm as the size of the inputs increases. Now, let's talk about the space that an algorithm takes up as the size of the input increases.
 
-  - We can use Big O notation to analyze `space complexity`,or how much additional memory do we need to allocate in order to run the code in our algorithm
   - You may hear the term `auxiliary space complexity` to refer to space required by the algorithm itself, not including space taken up by the inputs. Unless otherwise noted, when we talk about space complexity, we'll be talking about auxiliary space complexity. We're talking about mainly what's going on inside the algorithm.
 
   ### Rules of Thumb
@@ -272,3 +271,4 @@ console.log(double([1, 2, 3, 4]));
 - Big O Notation can give us a high level understanding of the time or space complexity of an algorithm
 - Big O Notation doesn't care about precision, only about general trends (linear? quadratic? constant?)
 - The time or space complexity (as measured by Big O) depends only on the algorithm, not the hardware used to run the algorithm
+- The number of inputs or n grows in proportion to the runtime, or the time it takes to complete execution.

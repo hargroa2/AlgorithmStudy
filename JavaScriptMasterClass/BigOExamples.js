@@ -58,7 +58,7 @@ let logAtMost5 = (n) => {
   }
 };
 
-// console.log(logAtMost5(6)); // O(1), at max 5 operations
+console.log(logAtMost5(6)); // O(1), at max 5 operations
 
 function subtotals(array) {
   var subtotalArray = Array(array.length);
