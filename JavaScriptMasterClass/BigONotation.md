@@ -7,13 +7,16 @@
   - It's important to have a precise vocabulary to talk about how our code performs
   - When your code slows down or crashes, identifying parts of the code that are inefficient can help us find pain points in our applications
 
-- It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow. As n grows, the time that has elapsed or the runtime grows in proportion. With n as an example, it roughly grows in a linear 1 to 1 pattern.
+- It allows us to talk formally about how the runtime of an algorithm grows as the inputs grow. With O(n) as an example, it roughly grows in a linear 1 to 1 pattern. As n grows, the time that has elapsed or the runtime grows in proportion.
 
 - We say that an algorithm is `O(f(n))` if the number of simple operations the computer has to do is eventually less than a constant times `f(n)`, as n increases. The "f" means function, "n" is the value that is passed through that function. For example, `f(n) = n` is just describing the relationship between the input of the function and the runtime, being n in this case. It could also be x^2^ (x squared), 1, and so on.
+
   - f(n) could be linear --> f(n) = n
   - f(n) could be quadratic --> f(n) = n^2^
   - f(n) could be constant --> f(n) = 1
   - f(n) could be something entirely different
+
+  ![Big O Notation Chart](bigO.png)
 
 ## Timing Our Code
 
