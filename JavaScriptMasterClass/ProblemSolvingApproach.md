@@ -164,3 +164,33 @@ let charCount = (str) => {
        return result;
    }
 ```
+
+## Look Back and Refactor
+
+- While it can be tempting to just say that you're done once you have a solution that is working, you should try to strive for finding better ways to solve it to demonstrate your abilities.
+  - Talk about the parts you don't like or how you don't like how it looks, reads, how easy it is to understand.
+  - Ask yourself these questions OUT LOUD, even with the person there:
+    - Can you check the result? Does the code work?
+    - Can you derive the result differently?
+    - Can you understand it at a glance?
+    - Can you use the result or method for some other problem?
+    - Can you improve the performance of your solution?
+    - Can you think of other ways to refactor?
+    - How have other people solved this problem?
+
+```
+let charCount = (str) => {
+    let obj = {};
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (/[a-z0-9]/.test(char)) {
+            if (obj[char] > 0) {
+                obj[char]++;
+            } else {
+                obj[char] = 1;
+            };
+        }
+    }
+    return obj;
+}
+```
