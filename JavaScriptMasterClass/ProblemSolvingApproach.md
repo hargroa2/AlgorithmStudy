@@ -47,3 +47,25 @@
    - Maybe we call our function add, and then sum is our result that we return, and our inputs are called num1 and num2.
 
 ## Exploring Concrete Examples
+
+- Coming up with examples can help you understand the problem better
+- Examples also provide sanity checks that your eventual solution works how it should
+
+1. Start with simple examples
+   - After you understand the problem and go through the previous step, you should try to write 2 or 3 simple examples with the input and then the output.
+2. Progress to more complex examples
+3. Explore examples with empty inputs or edge cases
+4. Explore examples with invalid inputs
+
+### Example: Write a function which takes a string and returns counts of each character in the string.
+
+```
+charCount("aaaa"); // {a: 4 }
+charCount("hello") // {h: 1, e: 1, l: 2, o: 1}
+
+// Do we include all alphabet letters and just put 0 as the value?
+// Do we include uppercasing AND lowercasing? Do we ignore casing?
+// Do we include spaces?
+// What if someone doesn't pass anything in to it or has an empty string?
+// What if someone passes in something that isn't a string?
+```
