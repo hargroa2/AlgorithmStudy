@@ -93,7 +93,7 @@ Big O of Arrays
 - splice - O(n)
 
   - Removes and adds (and possibly replaces) new elements from the original contents of an array
-    - arr.splice(4, 1, 'itemToReplace1ElementAtIndex4')
+    - `arr.splice(4, 1, 'itemToReplace1ElementAtIndex4')`
 
 - sort - O(n \* log n)
 

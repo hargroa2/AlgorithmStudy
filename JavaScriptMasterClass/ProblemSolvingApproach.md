@@ -21,3 +21,7 @@
 5. Look back and refactor
 
 ## Understand The Problem
+
+- The best thing to do when you are first introduced to a problem that you don't fully understand is to ask yourself or to ask someone else questions.
+
+  1. Can I restate the problem in my own words?
