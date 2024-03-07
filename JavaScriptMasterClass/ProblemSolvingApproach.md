@@ -69,3 +69,69 @@ charCount("hello") // {h: 1, e: 1, l: 2, o: 1}
 // What if someone doesn't pass anything in to it or has an empty string?
 // What if someone passes in something that isn't a string?
 ```
+
+## Break It Down
+
+- Take the actual steps of the problem and write them down. It doesn't have to be full pseudocode or valid syntax, but little comments as a guide for steps to take.
+
+  - Don't just start silently typing away with your brow furrowed. Talk out what you're thinking aloud with the person, tell them what your approach is and maybe even ask, "Do you think that'll work?" This might get you a hint from the person if you try to interact with them more.
+  - This forces you to think about the code you'll write before you write it and helps you catch any lingering conceptual issues or misunderstandings before you dive in and have to worry about details (like language syntax)
+
+  ### Example: Write a function which takes in a string and returns counts of each character in the string.
+
+```
+    // My examples:
+
+    charCount("aaaa");
+    /*
+    {
+        a: 4
+    }
+    */
+
+    charCount("hello");
+    /*
+    {
+        h: 1,
+        e: 1,
+        l: 2,
+        o: 1
+    }
+    */
+    charCount("Your PIN number is 1234!");
+    /*
+        1: 1,
+        2: 1,
+        3: 1,
+        4: 1,
+        b: 1,
+        e: 1,
+        i: 2,
+        m: 1,
+        n: 2,
+        o: 1,
+        p: 1,
+        r: 2,
+        s: 1,
+        u: 2,
+        y: 1
+    */
+
+    // Now we will type up the skeleton of our function
+    let charCount = (str) => {
+        // we need to loop over every character in the string
+        // we need to check if that character is already in our object or not and increase its count. If it was already there, we add one to it
+        // return an object with keys that are lowercase alphanumeric characters in the string
+
+        // make object to return at end
+        // loop over string, for each character...
+            // if the char is a number/letter AND a key in object, add one to count
+            // if the char is a number/letter and not in object, add it and set value to 1
+            // if char is something else (space, period, etc.)don't do anything
+        // return object at end
+    }
+```
+
+## Solve/Simplify
+
+- At this point, you should try to solve the problem. You might be 80% confident at this point but you're not sure how to do it, or maybe there's two things that are really challenging. That's why simplify is there: **_if you can't solve the problem, solve a simpler problem._** It pretty commonly can lead you to an answer to the more complicated aspect of the problem.
