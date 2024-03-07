@@ -120,7 +120,8 @@ charCount("hello") // {h: 1, e: 1, l: 2, o: 1}
     // Now we will type up the skeleton of our function
     let charCount = (str) => {
         // we need to loop over every character in the string
-        // we need to check if that character is already in our object or not and increase its count. If it was already there, we add one to it
+        // we need to check if that character is already in our object or not and increase its count.
+        If it was already there, we add one to it
         // return an object with keys that are lowercase alphanumeric characters in the string
 
         // make object to return at end
@@ -196,10 +197,18 @@ let charCount = (str) => {
 
 /*
 Some fixes:
-    - Not a fan of using a for-loop; could at least use a for of loop with ES6 syntax instead so we don't have to work with i. The for of loop automatically gives you the characters
-    - If-else statements can usually be broken down if they are simple logic so that you can shorten the code to one line via ternary operators or short-circuit evaluation using && or ||
-    - When it comes to regular expressions, the performance of it can vary depending on what you're doing and depending on the browser that you're in. Instead of using it, we could replace it with a simple mathematical comparison using charCodeAt(). Using the character codes is more efficient in comparison to using regular expressions.
-    - Is it better to first check for alphanumeric characters so that we weed out all the spaces, the punctuation, everything that's not valid and then lowercase it afterwards? It depends and the answer may not be clear, so we will just do what we think is best here by doing it after we check if everything is alphanumeric.
+    - Not a fan of using a for-loop; could at least use a for of loop with ES6 syntax instead so we
+    don't have to work with i. The for of loop automatically gives you the characters
+    - If-else statements can usually be broken down if they are simple logic so that you can shorten
+    the code to one line via ternary operators or short-circuit evaluation using && or ||
+    - When it comes to regular expressions, the performance of it can vary depending on what you're
+    doing and depending on the browser that you're in. Instead of using it, we could replace it with
+    a simple mathematical comparison using charCodeAt(). Using the character codes is more efficient
+    in comparison to using regular expressions.
+    - Is it better to first check for alphanumeric characters so that we weed out all the spaces,
+    the punctuation, everything that's not valid and then lowercase it afterwards? It depends and
+    the answer may not be clear, so we will just do what we think is best here by doing it after
+    we check if everything is alphanumeric.
 
 */
 
