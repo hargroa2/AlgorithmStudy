@@ -224,3 +224,17 @@ let isAlphaNumeric = (char) => {
         return true;
 }
 ```
+
+## Recap
+
+### Steps To Solve A Problem:
+
+1. Ask questions of the person, clarify things, make sure you **_understand the problem_**. Figure out how it should operate in different scenarios. Make sure that for both steps 1 and 2 that you are talking about these things out loud with the person so that they understand your thought process.
+
+2. Understand the edge cases. How should you handle the inputs, outputs, errors or invalid entries, and anything else that might come up. **_Explore concrete examples_** that the person gives you by typing them out in your comments.
+
+3. Type out a couple steps to lay out a plan/guide for the code in your comments. **_Break it down_** and type it line by line so that you understand it in simple terms
+
+4. Try to **_solve/simplify_** the problem, and if you end up not being able to right away, then solve a problem that you can fix, even if it is simpler and ignores complicated parts of the problem.
+
+5. Take a look at the code you made and reflect on it. **_Look back and refactor_**, even if you are satisfied with the code you created and it is working great. Even experts look at other people's solutions and scrutinize their own code to see what they could have done better.
