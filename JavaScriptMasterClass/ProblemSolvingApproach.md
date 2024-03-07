@@ -135,3 +135,32 @@ charCount("hello") // {h: 1, e: 1, l: 2, o: 1}
 ## Solve/Simplify
 
 - At this point, you should try to solve the problem. You might be 80% confident at this point but you're not sure how to do it, or maybe there's two things that are really challenging. That's why simplify is there: **_if you can't solve the problem, solve a simpler problem._** It pretty commonly can lead you to an answer to the more complicated aspect of the problem.
+  - Find the core difficult in what you're trying to do
+  - Temporarily ignore that difficulty
+  - Write a simplified solution
+  - Then incorporate that difficulty back in
+
+### Example: Write a function which takes in a string and returns counts of each character in the string.
+
+- So, we wrote down our examples, broke down the problem, now let's continue:
+
+```
+let charCount = (str) => {
+       // make object to return at end
+       let result = {};
+       // loop over string, for each character...
+       for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (result[char] > 0) {
+        // if the char is a number/letter AND a key in object, add one to count
+            result[char]++;
+        } else {
+        // if the char is a number/letter and NOT in object, add it and set value to 1
+            result[char] = 1;
+        }
+       }
+           // if char is something else (space, period, etc.)don't do anything
+       // return object at end
+       return result;
+   }
+```
