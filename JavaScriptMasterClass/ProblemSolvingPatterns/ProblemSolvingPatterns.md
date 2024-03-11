@@ -74,3 +74,57 @@ same([1, 2, 3, 2], [9, 1, 4, 4])
 - The frequency counter objects tell us how many times a number is within the array. So there is one 1, two 2s, one 3.
 - We use the objects to compare what is within the arrays by breaking them down and seeing how often its items occur, and see if they are the same or if they are alike somehow.
 - This solution is O(3n), which simplifies to O(n) since we are not nesting any loops like how the naive example previoiusly has indexof() within the for loop.
+
+### Example 2: Given two strings, write a function to determine if the second string is an anagram of the first. An anagram is a word, phrase, or name formed by rearranging the letters of another, such as cinema, formed from iceman.
+
+```
+validAnagram('', '') // true
+validAnagram('aaz', 'zza') // false
+validAnagram('anagram', 'nagaram') // true
+validAnagram('rat', 'car') // false
+validAnagram('awesome', 'awesom') // false
+validAnagram('qwerty', 'qeywrt') // true
+validAnagram('texttwisttime', 'timetwisttext') // true
+```
+
+### My Solution:
+
+```
+let validAnagram = (str1, str2) => {
+  // if the length of string 1 is not the same as string 2, return false
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  // create 2 objects as frequency counters
+  let obj1 = {};
+  let obj2 = {};
+  // loop over the first string to create the object
+  for (let val of str1) {
+    obj1[val] = (obj1[val] || 0) + 1;
+  }
+  // loop over the second string to create the object
+  for (let val of str2) {
+    obj2[val] = (obj2[val] || 0) + 1;
+  }
+  // compare the two strings and see if the first string's characters have the same frequency of occurrences as the second string
+  for (let key in obj1) {
+    // if the character is not in the first object, return false
+    if (!(key in obj1) || !(key in obj2)) {
+      return false;
+    }
+    // if the frequency of characters are not the same, return false
+    if (obj1[key] !== obj2[key]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+console.log(validAnagram("anagram", "nagaram")); // true or false
+```
+
+### Colt Steele's Solution
+
+```
+
+```
