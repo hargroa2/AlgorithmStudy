@@ -71,4 +71,4 @@ function validAnagram2(first, second) {
   return true;
 }
 
-// console.log(validAnagram2("hiya", "ihaa"));
+console.log(validAnagram2("hiya", "ihaa"));
