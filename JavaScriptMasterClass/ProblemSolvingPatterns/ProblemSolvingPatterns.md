@@ -31,10 +31,46 @@ let same = (arr1, arr2) => {
     }
     for (let i = 0; i < arr1.length; i++) {
         let correctIndex = arr2.indexOf(arr1[i] ** 2);
-        if (correctIndex === -1) {
+        if (correctIndex === -1) { // its not in there
             return false;
         }
-        arr2.splice(correctIndex, 1)
+        arr2.splice(correctIndex, 1) // removes it from the array
     }
+    return true;
 }
+
+console.log(same([1, 2, 3, 2], [9, 1, 4, 4]))
 ```
+
+- This is the naive approach beecause it takes O(n^2^) quadratic time to perform.
+
+```
+let same = (arr1, arr2) => {
+    if (arr1.length !== arr2.length) {
+        return false;
+    }
+    let frequencyCounter1 = {};
+    let frequencyCounter2 = {};
+    for (let val of arr1) {
+        frequencyCounter1[val] = (frequencyCounter1[val] || 0) + 1
+    }
+    for (let val of arr2) {
+        frequencyCounter2[val] = (frequencyCounter2[val] || 0) + 1
+    }
+    for (let key in frequencyCounter1) {
+        if (!(key ** 2 in frequencyCounter2)) {
+            return false;
+        }
+        if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+same([1, 2, 3, 2], [9, 1, 4, 4])
+```
+
+- The frequency counter objects tell us how many times a number is within the array. So there is one 1, two 2s, one 3.
+- We use the objects to compare what is within the arrays by breaking them down and seeing how often its items occur, and see if they are the same or if they are alike somehow.
+- This solution is O(3n), which simplifies to O(n) since we are not nesting any loops like how the naive example previoiusly has indexof() within the for loop.
