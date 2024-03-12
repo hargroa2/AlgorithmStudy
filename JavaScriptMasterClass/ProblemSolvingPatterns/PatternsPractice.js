@@ -63,3 +63,10 @@ Bonus:
 Time Complexity - O(n log n)
 Space Complexity - O(1)
 */
+
+// first, we need to use a rest operator so that we can pass in any amount of arguments into the function (...)
+let areThereDuplicates = (...args) => {
+  // work on this tomorrow BUG
+};
+
+console.log(areThereDuplicates(1, 2, 2)); // true or false
