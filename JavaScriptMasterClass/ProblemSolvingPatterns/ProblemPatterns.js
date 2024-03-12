@@ -85,7 +85,13 @@ countUniqueValues([-2, -1, -1, 0, 1]) // 4
 */
 
 let countUniqueValues = (arr) => {
-  //
+  // Use 2 pointers in order to loop through the array, and if the number has not shown up in the array yet, add 1 to the count. If it has already shown up, do not add to the count and keep going
+  // let counter = 0;
+  // for (let i = 0; i < arr.length; i++) {
+  //     for (let j = 0; j < arr.length; i++) {
+  //         if (arr[i] === arr[j]) {}
+  //     }
+  // }
 };
 
-console.log(countUniqueValues([1, 1, 1, 1, 1, 2]));
+console.log(countUniqueValues([1, 1, 1, 1, 1, 2])); // 2
