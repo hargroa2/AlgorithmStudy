@@ -33,7 +33,7 @@ let validAnagram = (str1, str2) => {
   // compare the two strings and see if the first string's characters have the same frequency of occurrences as the second string
   for (let key in obj1) {
     // if the character is not in the first object, return false
-    if (!(key in obj1) || !(key in obj2)) {
+    if (!(key in obj1)) {
       return false;
     }
     // if the frequency of characters are not the same, return false
