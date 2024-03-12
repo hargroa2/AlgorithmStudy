@@ -45,3 +45,21 @@ let sameFrequency = (num1, num2) => {
 };
 // console.log(sameFrequency(182, 281)); // true
 // console.log(sameFrequency(34, 14)); // false
+
+// ==== PRACTICE PROBLEM 2 ==== COMMENT
+
+// Implement a function called areThereDuplicates which accepts a variable number of arguments, and checks whether there are any duplicates among the arguments passed in. You can solve this using the frequency counter pattern OR the multiple pointers pattern.
+
+/*
+Examples:
+areThereDuplicates(1, 2, 3) // false
+areThereDuplicates(1, 2, 2) // true
+areThereDuplicates('a', 'b', 'c', 'a') // true
+
+Time Complexity - O(n)
+Space Complexity - O(n)
+
+Bonus:
+Time Complexity - O(n log n)
+Space Complexity - O(1)
+*/
