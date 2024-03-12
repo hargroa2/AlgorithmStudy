@@ -298,3 +298,58 @@ console.log(maxSubarraySum([4, 2, 1, 6, 2], 4)); // 13
 ```
 
 - Time Complexity: O(n)
+
+## Divide and Conquer Pattern
+
+- This patter involves dividing a data set into smaller chunks and then repeating a process with a subset of data.
+- This pattern can tremendously decrease time complexity
+- We usually take a larger set of data, like an array or string or something like a tree, we start by dividing it into smaller pieces and then doing something to each smaller piece to determine where to go next.
+
+### Example: Given a sorted array of integers, write a function called search (binary search) that accepts a value and returns the index where the value passed to the function is located. If teh value is not found, return -1.
+
+```
+search([1, 2, 3, 4, 5, 6],4) // 3
+search([1, 2, 3, 4, 5, 6],6) // 5
+search([1, 2, 3, 4, 5, 6],11) // -1
+```
+
+### Naive Solution:
+
+```
+let search = (arr, val) => {
+    for (let i = 0; i < arr.length; i++>) {
+        if (arr[i] === val) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
+- Time Complexity: 0(n)
+- This is called a Linear Search
+
+### Refactored Solution:
+
+```
+let binarySearch = (array, val) => {
+    let min = 0;
+    let max = array.length - 1;
+    while (min <= max) {
+        let middle = Math.floor((min + max) / 2);
+        let currentElement = array[middle];
+        if (array[middle] < val) {
+            min = middle + 1;
+        } else if (array[middle] > val) {
+            max = middle - 1;
+        } else {
+            return middle;
+        }
+    }
+        return -1;
+}
+
+console.log(binarySearch([1, 2, 3], 3))
+```
+
+- Time Complexity: Log(n) -> Binary Search
