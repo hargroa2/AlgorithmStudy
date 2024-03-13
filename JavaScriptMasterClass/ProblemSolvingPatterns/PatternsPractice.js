@@ -65,6 +65,51 @@ Space Complexity - O(1)
 */
 
 // first, we need to use a rest operator so that we can pass in any amount of arguments into the function (...)
-let areThereDuplicates = (...args) => {};
+// let areThereDuplicates = (...args) => {
+//   args.sort((a, b) => {
+//     if (a < b) return -1;
+//     if (a > b) return 1;
+//     return 0;
+//   });
+
+//   let left = 0;
+//   let right = 1;
+//   console.log(left, right);
+//   console.log(args[left], args[right]);
+//   while (args[right] < args.length) {
+//     // loop through the numbers, if args[left] === args[right], return true. If not the same, keep looping until the end
+//     if (args[left] === args[right]) {
+//       return true;
+//     }
+//     left++;
+//     right++;
+//   }
+//   return false;
+// };
+
+function areThereDuplicates(...args) {
+  args.sort((a, b) => {
+    if (a < b) return -1;
+    if (a > b) return 1;
+    return 0;
+  });
+
+  let start = 0;
+  let next = 1;
+  while (next < args.length) {
+    if (args[start] === args[next]) {
+      return true;
+    }
+    start++;
+    next++;
+  }
+  return false;
+}
 
 console.log(areThereDuplicates(1, 2, 2)); // true or false
+
+/* ONE LINER SOLUTION
+function areThereDuplicates() {
+  return new Set(arguments).size !== arguments.length;
+}
+*/
