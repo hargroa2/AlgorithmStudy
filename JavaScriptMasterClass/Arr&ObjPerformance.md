@@ -16,7 +16,6 @@ let instructor = {
 
 - When you don't need order
 - When you need fast access / insertion and removal
-- hi
 
   - Insertion - 0(1)
   - Removal - O(1)
